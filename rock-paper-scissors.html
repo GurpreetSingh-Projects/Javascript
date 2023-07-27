@@ -22,7 +22,7 @@
         compmove='scissors';
     }
     
-    console.log('Computer chose '+compmove);
+     
     
     if(compmove=='rock')
     {
@@ -36,7 +36,7 @@
     {
         result='You win';
     }
-    alert(`You picked rock. Computer picked ${compmove}. ${result}`);
+    console.log(`You picked rock. Computer picked ${compmove}. ${result}`);
 "
     >
       Rock
@@ -56,7 +56,6 @@ if(temp >= 0 && temp <1/3)
         compmove='scissors';
     }
     
-    console.log('Computer chose '+compmove);
     
     if(compmove=='rock')
     {
@@ -70,13 +69,13 @@ if(temp >= 0 && temp <1/3)
     {
         result='You lose';
     }
-    alert(`You picked rock. Computer picked ${compmove}. ${result}`);
+    console.log(`You picked paper. Computer picked ${compmove}. ${result}`);
     "
     >
       Paper
     </button>
     <button
-    onclick="
+      onclick="
 temp=Math.random();
 if(temp >= 0 && temp <1/3)
     {
@@ -90,7 +89,7 @@ if(temp >= 0 && temp <1/3)
         compmove='scissors';
     }
     
-    console.log('Computer chose '+compmove);
+   
     if(compmove=='rock')
     {
     result='You lose';
@@ -103,9 +102,11 @@ if(temp >= 0 && temp <1/3)
     {
         result='Tie';
     }
-    alert(`You picked rock. Computer picked ${compmove}. ${result}`);
+    console.log(`You picked scissors. Computer picked ${compmove}. ${result}`);
     "
-    >Scissors</button>
+    >
+      Scissors
+    </button>
 
     <script>
       let compmove = "";
