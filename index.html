@@ -9,63 +9,27 @@
     <div>Rock Paper Scissors Game -</div>
     <button
       onclick="
-    let comp=compmoves();
-    
-    if(comp=='rock')
-    {
-    result='Tie';
-    }
-    else if(comp=='paper')
-    {
-        result='You lose';
-    }
-    else if(comp=='scissors')
-    {
-        result='You win';
-    }
-    console.log(`You picked rock. Computer picked ${comp}. ${result}`);
+   let comp=compmoves();
+   let result=playgame('rock');
+    console.log(`You picked Rock. Computer picked ${comp}. ${result}`);
 "
     >
       Rock
     </button>
     <button
       onclick="
- let comp=compmoves();
-    
-    if(comp=='rock')
-    {
-    result='You win';
-    }
-    else if(comp=='paper')
-    {
-        result='Tie';
-    }
-    else if(comp=='scissors')
-    {
-        result='You lose';
-    }
-    console.log(`You picked paper. Computer picked ${comp}. ${result}`);
+    let comp=compmoves();
+    let result=playgame('paper');
+    console.log(`You picked Paper. Computer picked ${comp}. ${result}`);
     "
     >
       Paper
     </button>
     <button
       onclick="
- let comp=compmoves();
-   
-    if(comp=='rock')
-    {
-    result='You lose';
-    }
-    else if(comp=='paper')
-    {
-        result='You win';
-    }
-    else if(comp=='scissors')
-    {
-        result='Tie';
-    }
-    console.log(`You picked scissors. Computer picked ${comp}. ${result}`);
+    let comp=compmoves();
+    let result=playgame('scissors');
+    console.log(`You picked Scissors. Computer picked ${comp}. ${result}`);
     "
     >
       Scissors
@@ -77,14 +41,29 @@
 
       function compmoves() {
         temp = Math.random();
-        if (temp >= 0 && temp < 1 / 3) {
-          compmove = "rock";
-        } else if (temp >= 1 / 3 && temp < 2 / 3) {
-          compmove = "paper";
-        } else {
-          compmove = "scissors";
-        }
+        if (temp >= 0 && temp < 1 / 3) compmove = "rock";
+        else if (temp >= 1 / 3 && temp < 2 / 3) compmove = "paper";
+        else compmove = "scissors";
+
         return compmove;
+      }
+
+      function playgame(playermove) {
+        if (playermove === "rock") {
+          if (compmove == "rock") result = "Tie";
+          else if (compmove == "paper") result = "You lose";
+          else result = "You win";
+          
+        } else if (playermove === "paper") {
+          if (compmove == "rock") result = "You win";
+          else if (compmove == "paper") result = "Tie";
+          else result = "You lose";
+        } else {
+          if (compmove === "rock") result = "You lose";
+          else if (compmove === "paper") result = "You win";
+          else result = "Tie";
+        }
+        return result;
       }
     </script>
   </body>
