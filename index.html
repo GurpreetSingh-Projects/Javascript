@@ -9,107 +9,83 @@
     <div>Rock Paper Scissors Game -</div>
     <button
       onclick="
-    temp=Math.random();
-    if(temp >= 0 && temp <1/3)
-    {
-        compmove='rock';
-    }
-    else if ( temp >=1/3 && temp <2/3)
-    {
-        compmove='paper';
-    }
-    else {
-        compmove='scissors';
-    }
-     
+    let comp=compmoves();
     
-    if(compmove=='rock')
+    if(comp=='rock')
     {
     result='Tie';
     }
-    else if(compmove=='paper')
+    else if(comp=='paper')
     {
         result='You lose';
     }
-    else if(compmove=='scissors')
+    else if(comp=='scissors')
     {
         result='You win';
     }
-    console.log(`You picked rock. Computer picked ${compmove}. ${result}`);
+    console.log(`You picked rock. Computer picked ${comp}. ${result}`);
 "
     >
       Rock
     </button>
     <button
       onclick="
-temp=Math.random();
-if(temp >= 0 && temp <1/3)
-    {
-        compmove='rock';
-    }
-    else if ( temp >=1/3 && temp <2/3)
-    {
-        compmove='paper';
-    }
-    else {
-        compmove='scissors';
-    }
+ let comp=compmoves();
     
-    
-    if(compmove=='rock')
+    if(comp=='rock')
     {
     result='You win';
     }
-    else if(compmove=='paper')
+    else if(comp=='paper')
     {
         result='Tie';
     }
-    else if(compmove=='scissors')
+    else if(comp=='scissors')
     {
         result='You lose';
     }
-    console.log(`You picked paper. Computer picked ${compmove}. ${result}`);
+    console.log(`You picked paper. Computer picked ${comp}. ${result}`);
     "
     >
       Paper
     </button>
     <button
       onclick="
-temp=Math.random();
-if(temp >= 0 && temp <1/3)
-    {
-        compmove='rock';
-    }
-    else if ( temp >=1/3 && temp <2/3)
-    {
-        compmove='paper';
-    }
-    else {
-        compmove='scissors';
-    }
-    
+ let comp=compmoves();
    
-    if(compmove=='rock')
+    if(comp=='rock')
     {
     result='You lose';
     }
-    else if(compmove=='paper')
+    else if(comp=='paper')
     {
         result='You win';
     }
-    else if(compmove=='scissors')
+    else if(comp=='scissors')
     {
         result='Tie';
     }
-    console.log(`You picked scissors. Computer picked ${compmove}. ${result}`);
+    console.log(`You picked scissors. Computer picked ${comp}. ${result}`);
     "
     >
       Scissors
-    </button>   
+    </button>
     <script>
       let compmove = "";
       let temp = "";
       let result = "";
+
+      function compmoves() {
+        temp = Math.random();
+        if (temp >= 0 && temp < 1 / 3) {
+          compmove = "rock";
+        } else if (temp >= 1 / 3 && temp < 2 / 3) {
+          compmove = "paper";
+        } else {
+          compmove = "scissors";
+        }
+        return compmove;
+      }
     </script>
   </body>
 </html>
