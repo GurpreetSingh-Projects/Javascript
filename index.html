@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+  </head>
+  <body>
+    <div>Rock Paper Scissors Game -</div>
+    <button
+      onclick="
+    temp=Math.random();
+    if(temp >= 0 && temp <1/3)
+    {
+        compmove='rock';
+    }
+    else if ( temp >=1/3 && temp <2/3)
+    {
+        compmove='paper';
+    }
+    else {
+        compmove='scissors';
+    }
+     
+    
+    if(compmove=='rock')
+    {
+    result='Tie';
+    }
+    else if(compmove=='paper')
+    {
+        result='You lose';
+    }
+    else if(compmove=='scissors')
+    {
+        result='You win';
+    }
+    console.log(`You picked rock. Computer picked ${compmove}. ${result}`);
+"
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+temp=Math.random();
+if(temp >= 0 && temp <1/3)
+    {
+        compmove='rock';
+    }
+    else if ( temp >=1/3 && temp <2/3)
+    {
+        compmove='paper';
+    }
+    else {
+        compmove='scissors';
+    }
+    
+    
+    if(compmove=='rock')
+    {
+    result='You win';
+    }
+    else if(compmove=='paper')
+    {
+        result='Tie';
+    }
+    else if(compmove=='scissors')
+    {
+        result='You lose';
+    }
+    console.log(`You picked paper. Computer picked ${compmove}. ${result}`);
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+temp=Math.random();
+if(temp >= 0 && temp <1/3)
+    {
+        compmove='rock';
+    }
+    else if ( temp >=1/3 && temp <2/3)
+    {
+        compmove='paper';
+    }
+    else {
+        compmove='scissors';
+    }
+    
+   
+    if(compmove=='rock')
+    {
+    result='You lose';
+    }
+    else if(compmove=='paper')
+    {
+        result='You win';
+    }
+    else if(compmove=='scissors')
+    {
+        result='Tie';
+    }
+    console.log(`You picked scissors. Computer picked ${compmove}. ${result}`);
+    "
+    >
+      Scissors
+    </button>   
+    <script>
+      let compmove = "";
+      let temp = "";
+      let result = "";
+    </script>
+  </body>
+</html>
