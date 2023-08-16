@@ -8,10 +8,9 @@
   <body>
     <div>Rock Paper Scissors Game -</div>
     <button
-      onclick="
-   
+      onclick="   
    result=playgame('rock');
-    console.log(`You picked Rock. Computer picked ${compmove}. ${result}`);
+    
 "
     >
       Rock
@@ -20,7 +19,7 @@
       onclick="
     
     result=playgame('paper');
-    console.log(`You picked Paper. Computer picked ${compmove}. ${result}`);
+   
     "
     >
       Paper
@@ -28,11 +27,21 @@
     <button
       onclick="
     result=playgame('scissors');
-    console.log(`You picked Scissors. Computer picked ${compmove}. ${result}`);
+   
     "
     >
       Scissors
     </button>
+     <button
+      onclick="
+   
+   score.wins=0;
+   score.lost=0;
+   score.tie=0; 
+   alert('Score reset successfully')
+"
+    >
+      Reset
     <script>
       const score = {
         wins: 0,
@@ -70,8 +79,9 @@
         if (result.includes("win")) score.wins += 1;
         else if (result.includes("lose")) score.lost += 1;
         else score.tie += 1;
-        console.log(
-          "Result " + score.wins + " " + score.lost + " " + score.tie
+
+        alert(
+          `You picked ${playermove}. Computer picked ${compmove}. ${result} \nResult: Wins: ${score.wins} Lost: ${score.lost} Tie: ${score.tie}`
         );
         return result;
       }
