@@ -5,12 +5,7 @@ Add an "else if",  where you'll check if the value of the age is less than 65 an
 Add another "else if", and this time check if the value of the age is under 18. Inside the "else if" block, "type console.log" and then "You get an allowance".
 Add an "else" statement to capture any other value. Inside the block, type "console.log" and then "The value of the age variable is not numerical".
 Try adjusting the age and executing the program to see how it will affect the output.
-Code the days of the week program as a switch statement
-On the next line, define a new variable, name it day, and set its value to "Sunday".
-Start coding a switch statement, passing the day variable as the expression to evaluate.
-Inside the switch, add cases for every day of the week, starting with 'Monday', and ending with 'Sunday'. Make sure to use string values for days. Inside each case, for now, just add a console.log('Do something'), and add a break; on the line below.
-At the very bottom of the switch statement, add the default case and add a console.log('There is no such day').
-Finally, update the console.log calls for each case, based on whatever activity you have on each of the days.*/
+*/
 var age = 10;
 if (age > 65)
     console.log("You get your income from your pension");
